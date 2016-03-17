@@ -1,0 +1,16 @@
+﻿<Window x:Class="TimeOfDay.MainWindow"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Time in Percents" Height="500" Width="700" Name="UI">
+    <Grid DataContext="{Binding ElementName=UI}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="0" Stretch="Uniform">
+            <TextBlock Name="TimeInPercent" Text="{Binding CurrentTime}"/>
+        </Viewbox>
+        <ProgressBar Grid.Row="1" Name="ProgressInPercent" Value="{Binding TimeInPercents}" />
+    </Grid>
+</Window>

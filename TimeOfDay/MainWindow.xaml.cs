@@ -20,7 +20,7 @@ namespace TimeOfDay
 		{
 			InitializeComponent();
 			DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-			timer.Interval = TimeSpan.FromSeconds(1);
+			timer.Interval = TimeSpan.FromSeconds(0.5);
 			timer.IsEnabled = true;
 			timer.Tick += (s, e) => UpdateTime();
 		}
